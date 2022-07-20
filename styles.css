@@ -1,0 +1,72 @@
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    background: radial-gradient(#76b1ed, #bec5ed);
+}
+
+.Page-title{
+    color:#000041;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 4em;
+}
+
+.Current-game-info{
+    grid-column: 1 / -1;
+}
+
+.Game-information-container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: #000041;
+font-size: 2em;
+grid-column: 1 / -1;
+display: flex;
+justify-content: center;
+justify-content:space-around
+}
+
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap:10px;
+    margin: 50px;
+    justify-content: center;
+
+}
+
+
+
+
+.Card{
+   position: relative;
+    background-color: black;
+    height: 165px;
+    width: 125px;
+    
+   backface-visibility: hidden;
+}
+
+.Card-face{
+    transform: rotateX(180deg)
+}
+
+.Reverse-image{
+    align-self: flex-start;
+    transform: translateY(-10px);
+    transition: transform 100ms ease-in-out;
+}
+
+.Card-reverse:hover .Reverse-image{
+    transform: translateY(0);
+}
